@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons and Cursors</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Teste os botões</h1>
+      <p>
+        Interaja com os botões e observe a mudança de aparência e de cursores
+      </p>
+
+      <div class="buttons1">
+        <button class="primary" onclick="loading(event)">
+          Interaja comigo
+        </button>
+        <button class="secondary" disabled>Interaja comigo</button>
+        <button class="ternary movable">
+          <i class="ph ph-list"></i>
+          Interaja comigo
+        </button>
+      </div>
+    </div>
+    <script>
+      function loading(event) {
+        const button = event.currentTarget
+        button.classList.add("loading")
+        const text = button.textContent
+        button.innerHTML = `<i class="ph ph-spinner-gap"></i>${text}`
+      }
+    </script>
+
+    <div class="buttons2">
+      <div id="buttonsPrimary">
+        <button class="primary" disabled>disabled primary</button>
+
+        <button class="primary loading">
+          <i class="ph ph-spinner-gap"></i>
+          loading primary
+        </button>
+
+        <button class="primary movable">
+          <i class="ph ph-list"></i>
+          movable primary
+        </button>
+      </div>
+
+      <div id="buttonsSecondary">
+        <button class="secondary" disabled>disabled secondary</button>
+
+        <button class="secondary loading">
+          <i class="ph ph-spinner-gap"></i>
+          loading secondary
+        </button>
+
+        <button class="secondary movable">
+          <i class="ph ph-list"></i>
+          movable secondary
+        </button>
+      </div>
+
+      <div id="buttonsTernary">
+        <button class="ternary" disabled>disabled ternary</button>
+
+        <button class="ternary loading">
+          <i class="ph ph-spinner-gap"></i>
+          loading ternary
+        </button>
+
+        <button class="ternary movable">
+          <i class="ph ph-list"></i>
+          movable ternary
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

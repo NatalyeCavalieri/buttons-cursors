@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #0B0911;
+  display: flex;
+  margin: auto 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  gap:20px;
+}
+
+#buttonsPrimary{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#buttonsSecondary{
+   display: flex;
+   flex-direction: column;
+  gap: 15px;
+}
+
+#buttonsTernary{
+   display: flex;
+   flex-direction: column;
+  gap: 15px;
+}
+
+.primary{
+   --bg-default: rgba(130, 87, 229, 1);
+  --bg-hover: rgb(150, 116, 229);
+  --border-focus: rgb(217, 205, 247);
+}
+
+.secondary {
+  --bg-default: rgba(60, 55, 72, 1);
+  --bg-hover: rgba(106, 97, 127, 1);
+  --border-focus: rgb(217, 205, 247);
+}
+
+.ternary {
+  --bg-default: rgb(11, 9, 17);
+  --bg-hover: rgb(11, 9, 17);
+  --border-focus: rgb(217, 205, 247);
+}
+
+
+button {
+  background-color: var(--bg-default);
+  font-family: "inter";
+  border: none;
+  color: white;
+  border-radius: 24px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button:hover{
+  background-color: var(--bg-hover);
+}
+
+button:focus{
+  outline: 2px solid var(--border-focus);
+}
+
+button:disabled{
+  opacity: 0.56;
+  cursor: not-allowed;
+  background-color: var(--bg-default);
+}
+
+.loading i{
+  font-size: 20px;
+  animation: spin 1s infinite linear;
+}
+
+.movable i{
+  font-size: 18px;
+}
+
+.loading{
+  cursor: progress;
+}
+
+@keyframes spin {
+from{
+  transform: rotate(0deg);
+}
+to{
+  transform: rotate(360deg);
+}
+}
+
+.movable{
+  cursor:move;
+}
+
+.ternary.loading:hover{
+outline: 1px dashed rgb(221, 204, 204);
+}
+
+.ternary.movable:hover{
+outline: 1px dashed rgb(221, 204, 204);
+}
+
+#app{
+  width: 400px;
+  padding: 107px 44px;
+  margin-inline-start: 60px;
+  border-radius: 20px;
+  background: #130F1E;
+}
+
+
+
+
+h1{
+  margin-bottom: 8px;
+  color: white;
+}
+p {
+  color: grey;
+  margin-bottom: 68px;
+}
+
+.buttons1{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  
+}
+
+.buttons2{
+  display: flex;
+  gap: 20px;
+  padding-inline-end: 70px;
+}
